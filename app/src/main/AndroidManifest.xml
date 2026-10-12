@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -19,7 +20,7 @@
 
         <!-- Launcher: the bold splash, then sign in -->
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.auth.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.Registrar.Splash"
             android:screenOrientation="portrait">
@@ -30,19 +31,19 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.auth.LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".StudentHomeActivity" android:exported="false" />
-        <activity android:name=".LecturerRosterActivity" android:exported="false" />
-        <activity android:name=".ForgotPasswordActivity" android:exported="false" />
-        <activity android:name=".RegisterActivity" android:exported="false" />
-        <activity android:name=".MyGroupActivity" android:exported="false" />
-        <activity android:name=".GroupChangeActivity" android:exported="false" />
-        <activity android:name=".EditDetailsActivity" android:exported="false" />
-        <activity android:name=".SyncActivity" android:exported="false" />
-        <activity android:name=".LecturerDashboardActivity" android:exported="false" />
-        <activity android:name=".RequestsActivity" android:exported="false" />
+        <activity android:name=".ui.student.StudentHomeActivity" android:exported="false" />
+        <activity android:name=".ui.lecturer.LecturerRosterActivity" android:exported="false" />
+        <activity android:name=".ui.auth.ForgotPasswordActivity" android:exported="false" />
+        <activity android:name=".ui.auth.RegisterActivity" android:exported="false" />
+        <activity android:name=".ui.student.MyGroupActivity" android:exported="false" />
+        <activity android:name=".ui.student.GroupChangeActivity" android:exported="false" />
+        <activity android:name=".ui.student.EditDetailsActivity" android:exported="false" />
+        <activity android:name=".ui.sync.SyncActivity" android:exported="false" />
+        <activity android:name=".ui.lecturer.LecturerDashboardActivity" android:exported="false" />
+        <activity android:name=".ui.lecturer.RequestsActivity" android:exported="false" />
     </application>
 
 </manifest>
